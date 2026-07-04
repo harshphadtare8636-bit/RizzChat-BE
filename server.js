@@ -11,7 +11,7 @@ let { upload, cloudinary } = require("./config/cloudinary");
 
 let app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors()); //hi
 
 app.post("/upload",upload.single("file"),(req,res)=> //photo aya backend mai{/upload se},aur phir cloudinary se lena ka with using link,isse upload hoga
 {
